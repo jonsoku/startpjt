@@ -37,3 +37,39 @@
             <div id="example"></div>
             <script src="{{ asset('js/app.js') }}" defer></script>
     </body>
+
+
+# 필요한 extension
+    
+
+# babel
+    .babelrc 생성
+
+    {
+    "presets": ["@babel/preset-env", "@babel/preset-react"],
+    "plugins": ["@babel/plugin-proposal-class-properties"]
+    }
+
+# package.json
+    "devDependencies": {
+    "@babel/plugin-proposal-class-properties": "^7.4.0",
+    "@babel/preset-env": "^7.4.2",
+    "@babel/preset-react": "^7.0.0",
+    "axios": "^0.18.0",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-1": "^6.24.1",
+    "bootstrap": "^4.0.0",
+    "cross-env": "^5.1",
+    "jquery": "^3.2",
+    "laravel-mix": "^4.0.7",
+    "lodash": "^4.17.5",
+    "popper.js": "^1.12",
+    "prettier-eslint": "^8.8.2",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "resolve-url-loader": "^2.3.1",
+    "sass": "^1.15.2",
+    "sass-loader": "^7.1.0",
+    "vue-template-compiler": "^2.6.10"
