@@ -52,24 +52,88 @@
 
 # package.json
     "devDependencies": {
-    "@babel/plugin-proposal-class-properties": "^7.4.0",
-    "@babel/preset-env": "^7.4.2",
-    "@babel/preset-react": "^7.0.0",
-    "axios": "^0.18.0",
-    "babel-plugin-transform-class-properties": "^6.24.1",
-    "babel-preset-env": "^1.7.0",
-    "babel-preset-react": "^6.24.1",
-    "babel-preset-stage-1": "^6.24.1",
-    "bootstrap": "^4.0.0",
-    "cross-env": "^5.1",
-    "jquery": "^3.2",
-    "laravel-mix": "^4.0.7",
-    "lodash": "^4.17.5",
-    "popper.js": "^1.12",
-    "prettier-eslint": "^8.8.2",
-    "react": "^16.2.0",
-    "react-dom": "^16.2.0",
-    "resolve-url-loader": "^2.3.1",
-    "sass": "^1.15.2",
-    "sass-loader": "^7.1.0",
-    "vue-template-compiler": "^2.6.10"
+        "@babel/plugin-proposal-class-properties": "^7.4.0",
+        "@babel/preset-env": "^7.4.2",
+        "@babel/preset-react": "^7.0.0",
+        "axios": "^0.18.0",
+        "babel-eslint": "^10.0.1",
+        "babel-plugin-transform-class-properties": "^6.24.1",
+        "babel-preset-env": "^1.7.0",
+        "babel-preset-react": "^6.24.1",
+        "babel-preset-stage-1": "^6.24.1",
+        "bootstrap": "^4.0.0",
+        "cross-env": "^5.1",
+        "jquery": "^3.2",
+        "laravel-mix": "^4.0.7",
+        "lodash": "^4.17.5",
+        "popper.js": "^1.12",
+        "prettier-eslint": "^8.8.2",
+        "react": "^16.2.0",
+        "react-dom": "^16.2.0",
+        "resolve-url-loader": "^2.3.1",
+        "sass": "^1.15.2",
+        "sass-loader": "^7.1.0",
+        "vue-template-compiler": "^2.6.10"
+    },
+
+
+# npm 관련
+    Step 1: $ npm cache clean --force
+
+    Step 2: delete node_modules by $ rm -rf node_modules folder or delete it manually by going into the directory and right-click > delete.
+
+    Step 3: npm install
+
+    To start again, $ npm start
+
+    This worked for me. Hopes it works for you too.
+
+    PS: Still if it is there, kindly check the error it displays in red and act accordingly. This error is specific to node.js environment. Happy Coding!!
+
+
+# jsx에서 emmet 활성화 (vscode)
+    cmd + ,
+
+    "files.associations": {
+    "*.js": "javascriptreact"
+    }
+
+
+# .eslintrc
+
+    {
+        "eslintConfig": {
+            "extends": "airbnb",
+            "rules": {
+            "react/prefer-stateless-function": 0,
+            "react/jsx-filename-extension": 0,
+            "react/jsx-one-expression-per-line": 0
+            },
+            "env": {
+            "browser": true
+            }
+        },
+        "parserOptions": {
+            "ecmaVersion": 6,
+            "sourceType": "module",
+            "ecmaFeatures": {
+            "jsx": true
+            }
+        },
+        "rules": {
+            "semi": "error"
+        }
+    }
+
+
+# .prettierrc
+
+    {
+        "singleQuote": true,
+        "semi": true,
+        "useTabs": false,
+        "tabWidth": 2,
+        "trailingComma": "all",
+        "printWidth": 80
+    }
+
